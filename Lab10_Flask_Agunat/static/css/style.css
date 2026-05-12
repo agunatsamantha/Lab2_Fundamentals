@@ -1,0 +1,79 @@
+body {
+    background-color: #F8F8F8; /* Light Gray */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #44443B; /* Dark Gray */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #44443B; /* Dark Gray */
+    color: #EC7A1C; /* Vibrant Orange */
+    padding: 10px;
+}
+
+nav a {
+    color: #EC7A1C; /* Vibrant Orange */
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* SNIPPET 15: Add Hover Effect to Nav Links */
+nav a:hover { 
+    text-decoration: underline;    
+    color: #FFA500; /* Bright Orange/Gold on hover */
+}
+
+header {
+    padding: 10px;
+    background: #9B806E; /* Warm Taupe */
+    text-align: center;
+    color: #44443B; /* Dark Gray */
+}
+
+header img {
+    width: 80px; 
+    height: auto; 
+}
+
+/* Example button styled with deep rust orange */
+button {
+    background-color: #90462C; /* Deep Rust Orange */
+    color: #E6E4E0; /* Light Gray */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #EC7A1C; /* Vibrant Orange */
+}
+
+/* SNIPPET 16: Custom Styling for Email Field Class */
+.input-field {
+    border: 2px solid #9B806E; /* Matches your Warm Taupe header */
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #90462C; /* Changes to Deep Rust Orange on focus */
+    box-shadow: 0 0 5px rgba(144, 70, 44, 0.3);
+}
+
+/* SNIPPET 19: Add Form Padding with CSS */
+form div { 
+    margin-bottom: 15px; /* Adds breathing room between form fields */
+}
+
+/* Optional: Para maging malinis ang alignment ng labels */
+form label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}

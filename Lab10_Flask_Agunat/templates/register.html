@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<h2>Create a New Account</h2> 
+<p>Please fill in the details below:</p> 
+<form method="POST"> 
+    {{ form.hidden_tag() }} 
+    
+    <div>
+        {{ form.email.label }}<br>
+        {{ form.email(class_="input", size=30, value="student@tup.edu.ph") }}<br>
+        <small style="color: gray;">{{ form.email.description }}</small>
+    </div> 
+
+    <br>
+
+    <div>
+        {{ form.password.label }}<br>
+        {{ form.password(size=30) }}
+    </div> 
+
+    <br>
+
+    <div>
+        {{ form.submit(class_="btn btn-primary") }}
+    </div> 
+</form> 
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+<div style="max-width: 500px; margin: auto; text-align: center;">
+    <h2>User Profile</h2>
+    
+    <div style="margin-bottom: 20px;">
+        <img src="{{ url_for('static', filename='images/' + (current_user.profile_pic or 'default.png')) }}" 
+             alt="Profile Picture" 
+             style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #EC7A1C;">
+    </div>
+
+    <p><strong>Email:</strong> {{ current_user.email }}</p>
+    <p><strong>Role:</strong> {{ current_user.role | capitalize }}</p>
+
+    <hr>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div style="margin-bottom: 15px;">
+            <label><strong>Display Name:</strong></label><br>
+            <input type="text" name="display_name" value="{{ current_user.display_name or '' }}" 
+                   placeholder="Enter your name" style="padding: 8px; width: 80%;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label><strong>Change Profile Picture:</strong></label><br>
+            <input type="file" name="profile_pic" style="margin-top: 10px;">
+        </div>
+
+        <button type="submit" style="background-color: #EC7A1C; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;">
+            Save Changes
+        </button>
+    </form>
+</div>
+{% endblock %}
